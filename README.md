@@ -7,6 +7,7 @@ Simple Login Page with Express.js Server
 This project consists of a basic login page with a blurred background and an Express.js backend that handles user authentication. The frontend sends user credentials via a GET request, and the server validates them.
 
 /your-project-folder
+
 │── index.html      # Login page (frontend)
 
 │── index.js        # Express.js server (backend)
