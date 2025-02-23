@@ -8,10 +8,15 @@ This project consists of a basic login page with a blurred background and an Exp
 
 /your-project-folder
 │── index.html      # Login page (frontend)
+
 │── index.js        # Express.js server (backend)
+
 │── back.jpg        # Background image
+
 │── README.md       # Project documentation
+
 │── package.json    # Dependencies
+
 
 🚀 Getting Started
 
