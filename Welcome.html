@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .background{
+            background-image:url("./back.jpg");
+            background-size:contain;
+            height:105vh;
+            width:100vw;
+            margin:0;
+            background-position:center;
+        }
+        .login{
+            padding:10px;
+            border:2px solid white;
+            box-shadow: 30px;
+            backdrop-filter: blur(20px);
+            width: 350px;
+            height: 360px;
+            position: absolute;
+            left: 40%;
+            top: 50%;
+            top:30%;
+            border-radius:20px;
+            box-sizing: border-box;
+            text-align: center;
+            transform:translate(-50% -50%);
+            transition: hover;
+            opacity:0.1;
+            transition-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+        .login:hover{
+            opacity:1;
+        }
+        #button{
+            margin:2px;
+            border-radius:15px;
+            background-color:white;
+            text-align: center;
+            text-transform:capitalize ;
+            width:100%;
+            padding:5px;
+            ;
+        }
+        #username{
+            margin:2px;
+            border-radius:15px;
+            background-color:white;
+            text-align: center;
+            text-transform:lowercase ;
+            width:95%;
+            padding:5px;
+            border:0px;
+        }
+        #anchor{
+            color:white;
+        }
+        #login{
+            text-align: center;
+            padding:10px;
+            margin:5px;
+            color:white;
+            font-size:250%;
+        }
+    </style>
+</head>
+<body >
+    <div class="background">
+    <div class="login">
+        <form action="http://localhost:4000/login_get" method="GET" name="avi"><br>
+            <big><b id="login">Login</big></b><br><br><br><br>
+            <input id="username" type="text"  placeholder="email"><br><br>
+            <input id="username" type="paswword" name="password" placeholder="Password" required><br><br>
+            <input type="checkbox" name="checkbox">Remember me
+            <a href="" id="anchor" style="text-item:right;">Forgot Password?</a><br><br>
+            <button id="button"><b>Log in</b></button><br><br>
+            Don't have an accont <a href="" id="anchor">Register</a>
+        </form>
+    </div>
+</div>
+</body>
+</html>
