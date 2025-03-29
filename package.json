@@ -6,9 +6,9 @@
   "name": "welcome_logn",
   "version": "1.0.0",
   "main": "welcome.js",
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node welcome.js"
   },
   "keywords": [],
   "author": "",
