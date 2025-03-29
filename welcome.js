@@ -12,9 +12,28 @@ app.get("/login_get",(req,res)=>{
         console.log("Connection is Established");
     }
     else{console.log("Connection fails");}
-    res.send("Your Data Is Saved");
+    res.json(response);
     console.log(response);
 });
+app.post("/register", (req, res) => {
+    const { email, password } = req.body;
+    
+    if (!email || !password) {
+        return res.status(400).json({ message: "Email and password are required" });
+    }
+    
+    if (users[email]) {
+        return res.status(400).json({ message: "User already exists" });
+    }
+    
+    users[email] = password;
+    console.log("User registered:", email);
+    res.json({ message: "Registration successful" });
+});
+
+app.get("/register",(req,res)=>{
+    res.sendFile(path.join(__dirname,"register.html"))
+})
 app.listen(4000,()=>{
     console.log("Server Is Running On Node Server");
 });

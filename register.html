@@ -1,0 +1,97 @@
+\<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="shortcut icon" href="data-protection.png" type="image/x-icon">
+    <style>
+        .background{
+            background-image:url("./back.jpg");
+            background-size:contain;
+            height:105vh;
+            width:100vw;
+            margin:0;
+            background-position:center;
+        }
+        .register{
+            padding:10px;
+            border:2px solid white;
+            box-shadow: 30px;
+            backdrop-filter: blur(20px);
+            width: 350px;
+            height: 450px;
+            position: absolute;
+            left: 40%;
+            top: 50%;
+            top:30%;
+            border-radius:20px;
+            box-sizing: border-box;
+            text-align: center;
+            transform:translate(-50% -50%);
+            transition: hover;
+            opacity:0.1;
+            transition-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+        .register:hover{
+            opacity:1;
+            transition: opacity 1s ease-in-out, visibility 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+        #button{
+            margin:2px;
+            border-radius:15px;
+            background-color:white;
+            text-align: center;
+            text-transform:capitalize;
+            width:100%;
+            padding:5px;
+        }
+        .input-field{
+            margin:2px;
+            border-radius:15px;
+            background-color:white;
+            text-align: center;
+            width:95%;
+            padding:5px;
+            outline: none;
+            background: transparent;
+            border:none;
+            border-bottom: 5px solid white;
+        }
+        .input-field::placeholder{
+            color:white;
+        }
+        #anchor{
+            color:white;
+        }
+        #register{
+            text-align: center;
+            padding:10px;
+            margin:5px;
+            color:white;
+            font-size:250%;
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+    <div class="register">
+        <form action="http://localhost:4000/register" method="POST" name="registerForm" onsubmit="redirectToWelcome(event)"><br>
+            <big><b id="register">Register</b></big><br><br>
+            <input class="input-field" type="text" name="name" placeholder="Full Name" required><br><br>
+            <input class="input-field" type="email" name="email" placeholder="Email" required><br><br>
+            <input class="input-field" type="password" name="password" placeholder="Password" required><br><br>
+            <input class="input-field" type="password" name="confirm_password" placeholder="Confirm Password" required><br><br>
+            <button id="button" type="submit"><b>Register</b></button><br><br>
+            Already have an account? <a href="Welcome.html" id="anchor">Login</a>
+        </form>
+    </div>
+</div>
+<script>
+    function redirectToWelcome(event) {
+        event.preventDefault(); 
+        window.location.href = "welcome.html";
+    }
+</script>
+</body>
+</html>
